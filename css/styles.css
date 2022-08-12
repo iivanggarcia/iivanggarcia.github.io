@@ -256,6 +256,12 @@ html {
     background-position: center center;
 }
 
+#portfolio .proyecto3 {
+    background: linear-gradient( rgba(0, 1, 88, 0.8), rgba(0, 1, 88, 0.8)), url("./../img/proyecto4.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
 #portfolio .fila .servicio {
     color: #fff;
     max-width: 350px;
