@@ -4,55 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Store</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <script src="./js/index.js"></script>
-    <link rel="icon" type="image/x-icon" href="./rsc/favicon.ico">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/styles.css">
+    <title>LP Desarrollador Web</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Charity <img src="./rsc/logo.png" class="img-hm30"> Store</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                </ul>
-                <form class="d-flex me-auto" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Enlatados, líquidos, otros" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit">Buscar</button>
-                </form>
-                <ul class="navbar-nav me-left mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link text-light black-bold" href="#">Carrito</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Iniciar sesión</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Regístrate</a>
-                    </li>
-                </ul>
-
+    <!-- SECCION I N I C I O -->
+    <section id="inicio">
+        <div class="contenido">
+            <header>
+                <div class="contenido-header">
+                    <h1>Diego AG</h1>
+                    <nav id="nav" class="">
+                        <ul id="links">
+                            <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a></li>
+                            <li><a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a></li>
+                            <li><a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a></li>
+                        </ul>
+                    </nav>
+                    <div id="icono-nav" onclick="responsiveMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="redes">
+                        <a href="https://www.linkedin.com/in/agdiego/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/iivanggarcia"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </header>
+            <div class="presentacion">
+                <p class="bienvenida">Hola!</p>
+                <h2>Soy <span>Diego García</span>, Futuro Ingeniero</h2>
+                <p class="descripcion">Soy estudiante de Ingeniería en Sistemas Computacionales en la Escuela Superior de Cómputo</p>
+                <a href="#portfolio">Ir a Portafolio</a>
             </div>
         </div>
-    </nav>
+    </section>
 
+    <!-- SECCION S O B R E M I -->
+    <section id="sobremi">
+        <div class="contenedor-foto">
+            <img src="img/foto.jpg" alt="">
+        </div>
+        <div class="sobremi">
+            <p class="titulo-seccion">Sobre Mi</p>
+            <h2>Hola, Soy <span>Diego Aragón</span> </h2>
+            <h3>Estudiante de ingeniería en sistemas</h3>
+            <p>Estudiante entusiasmado por el desarrollo de software, con experiencia en proyectos de desarrollo web front-end y back-end. Me considero proactivo, organizado, autodidacta, y apasionado por la resolución de problemas.</p>
+            <a href="src/Diego Aragón CV.pdf">Descargar CV</a>
+        </div>
+    </section>
 
+    <!-- SECCION P O R T F O L I O -->
+    <section id="portfolio">
+        <h3 class="titulo-seccion">MIS PROYECTOS</h3>
+        <div class="fila">
+            <div class="servicio proyecto1">
+                <h4>Cafetería WEB</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li><a href="https://cafeteria2021.000webhostapp.com/"><i class="fas fa-globe-asia"></i></a></li>
+                    <li><a href="https://github.com/AngelCh415/Web_Project"><i class="fab fa-github"></i></a></li>
+                </ul>
+                <p>Sistema con un CRUD implementado en PHP y mySQL. Uso de Materialize.</p>
+            </div>
+            <div class="servicio proyecto2">
+                <h4>Saving Christmas</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li><a href="https://half-starved-pokes.000webhostapp.com/"><i class="fas fa-globe-asia"></i></a></li>
+                    <li><a href="https://github.com/iivanggarcia/saving-christmas"><i class="fab fa-github"></i></a></li>
+                </ul>
+                <p>Videojuego web creado con KineticJS, usando programación orientada a objetos en JS.</p>
+            </div>
+            <div class="servicio proyecto3">
+                <h4>Helping Hands</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li><a href="#"><i class="fas fa-globe-asia"></i></a></li>
+                    <li><a href="#"><i class="fab fa-github"></i></a></li>
+                </ul>
+                <p>Sistema de tienda digital usando Bootstrap, PHP y mySQL.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- SECCION FOOTER -->
+    <footer>
+        <p>Visita mis Redes</p>
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/agdiego/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/iivanggarcia"><i class="fa-brands fa-github"></i></a>
+        </div>
 
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
